@@ -1,38 +1,50 @@
 body {
-  background-color: black;
+  background: linear-gradient(90deg, #3F4F54, #5D818C, #7C97A0);
+  padding-top: 50px;
   width: 100%;
   height: 100%;
 }
 
 #calc-body {
-  background-color: grey;
+  background: linear-gradient(0deg, #6B5184, #8D75A3);
+  border: 4px outset #5F4973;
+  box-shadow: 0px 10px 15px 1px rgb(23, 41, 43, 0.7);
+  border-radius: 15px;
   position: relative;
-  width: 375px;
-  height: 575px;
+  width: 350px;
+  height: 525px;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 50px;
+  padding-top: 35px;
 }
 
 #display {
-  background-color: black;
+  background-color: #30383A;
+  border: 3px inset #5F4973;
+  border-radius: 5px;
   position: relative;
   width: 275px;
   height: 100px;
-  margin: 0px 50px 50px 50px;
+  margin: 0px auto 35px auto;
 }
 
 #btn-sect {
   position: relative;
   width: 275px;
   height: 400px;
-  margin-left: 50px;
-  margin-right: 50px;
+  margin-left: auto;
+  margin-right: auto;
   display: grid;
   grid-template-columns: 50px 50px 50px 50px;
   grid-template-rows: 50px 50px 50px 50px 50px;
   grid-column-gap: 25px;
   grid-row-gap: 25px;
+}
+
+button {
+  border-radius: 25px;
+  background: linear-gradient(0deg, #B2BCA8, #B7C0AF);
+  border: 2px outset #7A8271;
 }
 
 .sm-btn {
