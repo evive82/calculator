@@ -7,12 +7,12 @@ body {
 
 #calc-body {
   background: linear-gradient(0deg, #6B5184, #8D75A3);
-  border: 4px outset #5F4973;
+  border: 5px outset #5F4973;
   box-shadow: 0px 10px 15px 1px rgb(23, 41, 43, 0.7);
   border-radius: 15px;
   position: relative;
-  width: 350px;
-  height: 525px;
+  width: 330px;
+  height: 580px;
   margin-left: auto;
   margin-right: auto;
   padding-top: 35px;
@@ -23,7 +23,7 @@ body {
   border: 3px inset #5F4973;
   border-radius: 5px;
   position: relative;
-  width: 275px;
+  width: 255px;
   height: 100px;
   margin: 0px auto 35px auto;
 }
@@ -34,17 +34,19 @@ body {
   height: 400px;
   margin-left: auto;
   margin-right: auto;
+  left: 5px;
   display: grid;
   grid-template-columns: 50px 50px 50px 50px;
-  grid-template-rows: 50px 50px 50px 50px 50px;
-  grid-column-gap: 25px;
-  grid-row-gap: 25px;
+  grid-template-rows: 50px 50px 50px 50px 50px 50px;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
 }
 
 button {
   border-radius: 25px;
   background: linear-gradient(0deg, #B2BCA8, #B7C0AF);
   border: 2px outset #7A8271;
+  box-shadow: 0px 1px 2px 1px rgba(72, 50, 92, 0.9);
 }
 
 .sm-btn {
@@ -56,15 +58,21 @@ button {
 .lg-btn {
   position: relative;
   width: 50px;
-  height: 125px;
+  height: 120px;
+}
+
+.wide-btn {
+  position: relative;
+  width: 125px;
+  height: 50px;
 }
 
 #add-btn {
   grid-column: 4 / 5;
-  grid-row: 2 / 4;
+  grid-row: 3 / 5;
 }
 
 #equals-btn {
   grid-column: 4 / 5;
-  grid-row: 4 / 6;
+  grid-row: 5 / 7;
 }
