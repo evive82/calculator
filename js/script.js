@@ -2,9 +2,7 @@ const inputDisp = document.getElementById(`main-display`);
 const opDisplay = document.getElementById(`top-display`);
 const buttons = document.querySelectorAll(`button`);
 let operation = '';
-let prevNum = 0;
-
-
+let prevNum = '';
 
 function input(key) {
   if (inputDisp.classList.contains('operated')) {
@@ -23,7 +21,7 @@ function clear() {
   inputDisp.innerHTML = 0;
   opDisplay.innerHTML = '';
   operation = '';
-  prevNum = 0;
+  prevNum = '';
 }
 
 function backspace() {
@@ -40,10 +38,10 @@ function pressOp(opKey, num) {
     opDisplay.innerHTML = operation;
   } else {
   }
-  */  
+  */
   const oper = opKey.replace('/', '÷').replace('s', '√');
-  const newNum = operate(oper, prevNum, num);
-  console.log(newNum)
+  console.log(`about to operate: ${prevNum} ${oper} ${num}`)
+  const newNum = (prevNum === '') ? num : operate(oper, prevNum, num);
   operation += ` ${num} ${oper}`;
   opDisplay.innerHTML = operation;
   inputDisp.classList.add('operated');
@@ -52,9 +50,16 @@ function pressOp(opKey, num) {
 }
 
 function pressEqual(num) {
-  let oper = operation.slice(-1);
-  let finalNum = operate(oper, prevNum, num)
-  clear();
+  let finalNum;
+  if (!inputDisp.classList.contains('operated')) {
+    let oper = operation.slice(-1);
+    finalNum = operate(oper, prevNum, num)
+    clear();
+  } else {
+    finalNum = inputDisp.innerHTML;
+    clear();
+  }
+  prevNum = '';
   inputDisp.innerHTML = finalNum;
 }
 
@@ -63,6 +68,7 @@ function operate(oper, num1, num2) {
     case '+':
       return num1 + num2;
     case '-':
+      console.log('returning' + (num1 - num2))
       return num1 - num2;
     case '*':
       return num1 * num2;
@@ -87,7 +93,6 @@ buttons.forEach((btn) => {
   btn.addEventListener('click', (e) => {
     const clicked = e.target;
     const key = clicked.getAttribute('data-key');
-    console.log(e)
     if (!isNaN(key)) {
       input(key);
     }
@@ -107,9 +112,9 @@ buttons.forEach((btn) => {
       }
     } else {
       if (inputDisp.innerText.length > 0) {
+        console.log(`pressing opkey, key: ${key}, number: ${Number(inputDisp.innerText)}`)
         pressOp(key, Number(inputDisp.innerText));
       }
     }
   });
 });
-
