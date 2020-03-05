@@ -135,3 +135,7 @@ button::-moz-focus-inner {
   grid-column: 4 / 5;
   grid-row: 5 / 7;
 }
+
+#arrow-ico {
+  pointer-events: none;
+}
