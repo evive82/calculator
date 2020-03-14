@@ -12,7 +12,7 @@ body {
   border-radius: 15px;
   position: relative;
   width: 330px;
-  height: 580px;
+  height: 510px;
   margin-left: auto;
   margin-right: auto;
   padding-top: 35px;
@@ -28,33 +28,22 @@ body {
   margin: 0px auto 35px auto;
 }
 
-.display-rows {
-  position: relative;
+#main-display {
   font-family: 'Fira Sans Condensed', sans-serif;
   color: #B7C0AF;
   opacity: 0.8;
   text-align: right;
-}
-
-#top-display {
-  position: relative;
-  width: 230px;
-  height: 20px;
-  margin: 10px auto 5px auto;
-}
-
-#main-display {
   position: relative;
   width: 230px;
   height: 50px;
-  margin: 5px auto 10px auto;
+  margin: 25px auto 25px auto;
   bottom: 2px;
   font-size: 45px;
 }
 
 #display-line {
   position: relative;
-  bottom: 10px;
+  bottom: 20px;
   width: 235px;
   height: 2px;
   margin-left: auto;
@@ -72,7 +61,7 @@ body {
   left: 7px;
   display: grid;
   grid-template-columns: 50px 50px 50px 50px;
-  grid-template-rows: 50px 50px 50px 50px 50px 50px;
+  grid-template-rows: 50px 50px 50px 50px 50px;
   grid-column-gap: 20px;
   grid-row-gap: 20px;
 }
@@ -120,20 +109,9 @@ button::-moz-focus-inner {
   height: 120px;
 }
 
-.wide-btn {
-  position: relative;
-  width: 125px;
-  height: 50px;
-}
-
-#add-btn {
-  grid-column: 4 / 5;
-  grid-row: 3 / 5;
-}
-
 #equals-btn {
   grid-column: 4 / 5;
-  grid-row: 5 / 7;
+  grid-row: 4 / 6;
 }
 
 #arrow-ico {
